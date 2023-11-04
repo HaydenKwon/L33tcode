@@ -17,7 +17,7 @@ class Solution(object):
             else:
                 current_string += i
                 current_set.add(i)
-        #this last part could be a little cleaner
+        #this last part could be a little cleaner, I think though not sure how
         if current_string != "":
             substrings.append(current_string)
         return len(substrings)
