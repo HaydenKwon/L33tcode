@@ -1,4 +1,4 @@
-#Just sort and loop through until h_index < position
+#Just sort and loop through until h_index < position, took roughly around 10 minutes need to gain more experience so I can hopefully solve these in 30 seconds to 5 minutes, I am just very lazy most times
 class Solution(object):
     def hIndex(self, citations):
         """
