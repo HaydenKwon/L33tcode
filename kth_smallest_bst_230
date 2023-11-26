@@ -1,0 +1,35 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
+#Created sorted list using binary search tree property with inorder traversal , should be O(n), takes about 3 minutes though I had to learn what an inorder traversal was(no experience with bsts)
+
+class Solution(object):
+    def kthSmallest(self, root, k):
+        """
+        :type root: TreeNode
+        :type k: int
+        :rtype: int
+        """
+        sorted = []
+        Inorder(sorted,root)
+        
+        return sorted[k-1]
+
+
+
+
+def Inorder(sorted,root):
+    
+    if root:
+        # First recur on left child
+        Inorder(sorted,root.left)
+ 
+        # append data
+        sorted.append(root.val)
+ 
+        # Now recur on right child
+        Inorder(sorted,root.right)
